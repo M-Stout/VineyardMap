@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vineyard Street Map</title>
+  <link rel="stylesheet" href="../js/jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jquery-jvectormap-2.0.1.min.js"></script>
+  <script src="VineyardMap.js"></script>
+  <script src="titleData.js"></script>
+  <script src="occupantData.js"></script>
+  <script src="positionData.js"></script>
+  <script src="colourData.js"></script>
+
+  
+  <!-- IF NMJK IS READING THIS THEN I USED YOUR CODE AS A REFERENCE THANKS FOR NOT BEING MAD AT ME :)-->
+  
+  <style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	#options {
+		line-height: 1.7em;
+		width: 30%;
+		position: fixed;
+		right: 0;
+		top: 10px;
+	}
+	.buttons {
+		background: none repeat scroll 0 0 #292929;
+		border-radius: 3px;
+		color: #ffffff;
+		height: 10px;
+		padding: 3px 5px;
+		text-align: center;
+		text-decoration: none;
+	}
+	#footer {
+		position: fixed;
+		border-top: 1px solid #464646;
+		color: #464646;
+		font-size: 1em;
+		padding: 0.5em 1em;
+		margin: 0;
+		width: 100%;
+		bottom: 0;
+	}
+	#footer a {
+		color: #2d3cff;
+		font-weight: bold !important;
+		text-decoration: none;
+	}
+  </style>
+  
+</head>
+<body>
+  <div>
+    <p style="margin: 8px;">Map of The Vineyard <br> Click <a href="https://docs.google.com/forms/d/15I4yf4jNXYhrdEeN2GlB_iVlYtmmEBaJSTLOTCE4CWQ/viewform?usp=send_form"> here</a> for the input form. <br> Last updated: 15:18 13/03/2015 GMT</p>
+  </div>
+  <div id="world-map-gdp" style="width: 75%; height: 800px; margin: 25px 0px 0px 25px; "></div>
+  <script>
+    $(function(){
+      	$('#world-map-gdp').vectorMap({
+        map: 'VineyardMap',
+		backgroundColor: 'transparent',
+		regionStyle: {
+			initial: {
+				stroke: 'transparent',
+				"stroke-width": 2,
+				"stroke-opacity": 1,
+				fill: '#a300ff',
+			}
+		  },
+        series: {
+        	regions: [{
+            	values: colourData,
+            	scale: ['#ff00ea', '#ff5100'],
+              	normalizeFunction: 'polynomial'
+            }]
+          },
+          onRegionTipShow: function(e, el, code){
+		    if (titleData[code] !== undefined) {
+		  	   el.html(el.html()+ '<br>' + "<strong>Title: </strong>" + ' '+titleData[code]+'');
+			}
+		    if (occupantData[code] !== undefined) {
+		  	   el.html(el.html()+ '<br>' + "<strong>Occupant: </strong>" + ' '+occupantData[code]+'');
+			}
+			if (positionData[code] !== undefined) {
+		     el.html(el.html()+ '<br>' + "<strong>Position: </strong>" + ' '+positionData[code]+'');
+			}
+          }
+
+        });
+	   
+    });
+  </script>
+  
+  <div id="footer">
+	<a href="http://jvectormap.com">jVectorMap</a>  by <a href="http://reddit.com/u/grimer30">grimer30</a>. Special thanks to <a href="http://reddit.com/u/nmjk">nmjk</a></a>.
+</div>
+</body>
+</html>
