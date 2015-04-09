@@ -1,8 +1,6 @@
 # VineyardMap
-jVectorMap streetmap of the Vineyard district in LoM.
-
-This is the readme file. You're welcome.
-
+jVectorMap streetmap of the Vineyard district in LoM.  
+This is the readme file. You're welcome.  
 
 
 Planned Updates:    
