@@ -9,4 +9,8 @@ var titleData= {
   "P138": "Poor Peasants Cafe and Dong Dank Tour Guides - Vineyard",
   "P215": "Justin's Secret Restaurant",
   "P509": "Autograph Museum",
+  "P82": "VYH Meeting Hall",
+  "P242": "The Landmark Inn",
+  "P148": "Card Shop",
+  "P180": "card Shop",
 };

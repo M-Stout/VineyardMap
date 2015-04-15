@@ -9,7 +9,7 @@ var occupantData = {
   "P643": "Jochem2020",
   "P304": "spaaaaacekitten",
   "Vineyard Town Hall": "SalamanderSoul",
-  "P219": "Mouseshy",
+  "P219": "",
   "P468": "i8pichu",
   "P171": "Dohrito",
   "P365": "Dorno",
@@ -17,6 +17,8 @@ var occupantData = {
   "P387": "Nasch",
   "P215": "sithlordRED",
   "P509": "_Latias",
+  "P82": "marginick, CastleCubed",
+  "P242": "ashesiiashes",
 
 
 };
