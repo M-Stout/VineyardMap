@@ -64,7 +64,7 @@
       	$('#world-map-gdp').vectorMap({
         map: 'VineyardMap',
 		backgroundColor: 'transparent',
-		zoomStep: '5',
+		zoomStep: '1.5',
 		regionStyle: {
 			initial: {
 				stroke: 'transparent',
@@ -72,7 +72,18 @@
 				"stroke-opacity": 1,
 				fill: '#a300ff',
 			}
-		  },
+		},
+        regionLabelStyle: {
+              initial: {
+                fill: '#003300',
+				"fill-opacity": '1',
+				"font-size": "60%"
+              },
+              hover: {
+                fill: 'black',
+				"fill-opacity": '0.2'
+              }
+            },		  
         series: {
         	regions: [{
             	values: colourData,
@@ -85,16 +96,42 @@
 		  	   el.html(el.html()+ '<br>' + "<strong>Title: </strong>" + ' '+titleData[code]+'');
 			}
 		    if (occupantData[code] !== undefined) {
-		  	   el.html(el.html()+ '<br>' + "<strong>Occupant: </strong>" + ' '+occupantData[code]+'');
+			   if (occupantData[code] == '') {
+			   	  	el.html(el.html()+ '<br>' + "<strong>Currently Vacant</strong>");
+			   }
+			   else {
+  			   		el.html(el.html()+ '<br>' + "<strong>Occupant: </strong>" + ' '+occupantData[code]+'');
+			   }
 			}
 			if (positionData[code] !== undefined) {
 		     el.html(el.html()+ '<br>' + "<strong>Position: </strong>" + ' '+positionData[code]+'');
 			}
-          }
-
+          },
+        labels: {
+              regions: {
+                render: function(code){
+					if (code == 'PORTAL') {
+					   return code;
+					}
+					if (colourData[code] == 3) {
+					   if (code.charAt(0) == 'P') {
+					   	  return Wrapper(titleData[code]);
+					   }
+					return Wrapper(code);
+					}
+                	<!-- return titleData[code]; -->
+                },
+              }
+            }
         });
 	   
     });
+	function Wrapper (input) {
+		var words = input.split(" ");
+		var output = words.join(" \n");
+		console.log(output);
+		return output;
+	}
   </script>
   <div id="form">
   	   <iframe src="https://docs.google.com/forms/d/15I4yf4jNXYhrdEeN2GlB_iVlYtmmEBaJSTLOTCE4CWQ/viewform?embedded=true" width="100%" height="50%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>

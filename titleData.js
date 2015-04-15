@@ -12,5 +12,5 @@ var titleData= {
   "P82": "VYH Meeting Hall",
   "P242": "The Landmark Inn",
   "P148": "Card Shop",
-  "P180": "card Shop",
+  "P180": "Card Shop",
 };
