@@ -19,9 +19,9 @@
 		margin: 0;
 		padding: 0;
 	}
-	#options {
-		line-height: 1.7em;
-		width: 30%;
+	#form {
+		width: 35%;
+		height: 95%;
 		position: fixed;
 		right: 0;
 		top: 10px;
@@ -39,6 +39,7 @@
 		position: fixed;
 		border-top: 1px solid #464646;
 		color: #464646;
+		background-color: #ffdba4;
 		font-size: 1em;
 		padding: 0.5em 1em;
 		margin: 0;
@@ -54,15 +55,16 @@
   
 </head>
 <body>
-  <div>
-    <p style="margin: 8px;">Map of The Vineyard <br> Click <a href="https://docs.google.com/forms/d/15I4yf4jNXYhrdEeN2GlB_iVlYtmmEBaJSTLOTCE4CWQ/viewform?usp=send_form"> here</a> for the input form. <br> Last updated: <a href="https://github.com/grimer30/VineyardMap">The GitHub is the best way to track updates.</a></p>
+  <div margin: 25px 0px 0px 25px;>
+  	   <h1> -Map of The Vineyard: </h1> -The census and all response data is shown on the right-hand side. <br> -Last updated: <a href="https://github.com/grimer30/VineyardMap">The GitHub is the best way to track updates.</a> Feel free to raise issues and make pull requests.
   </div>
-  <div id="world-map-gdp" style="width: 75%; height: 800px; margin: 25px 0px 0px 25px; "></div>
+  <div id="world-map-gdp" style="width: 75%; height: 800px; margin: 10px 10px 10px 10px; "></div>
   <script>
     $(function(){
       	$('#world-map-gdp').vectorMap({
         map: 'VineyardMap',
 		backgroundColor: 'transparent',
+		zoomStep: '5',
 		regionStyle: {
 			initial: {
 				stroke: 'transparent',
@@ -94,6 +96,11 @@
 	   
     });
   </script>
+  <div id="form">
+  	   <iframe src="https://docs.google.com/forms/d/15I4yf4jNXYhrdEeN2GlB_iVlYtmmEBaJSTLOTCE4CWQ/viewform?embedded=true" width="100%" height="50%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	   <iframe src="https://docs.google.com/spreadsheets/d/1qniWmRYxK3bauUnM_2_G1u9CJBrYFa7mGv03mtzlxeY/pubhtml?widget=true&amp;headers=false" width="100%" height="50%"></iframe>
+  </div>
+  
   
   <div id="footer">
 	<a href="http://jvectormap.com">jVectorMap</a>  by <a href="http://reddit.com/u/grimer30">grimer30</a>. Special thanks to <a href="http://reddit.com/u/nmjk">nmjk</a></a>. This map is now available on <a href="https://github.com/grimer30/VineyardMap">GitHub</a>, don't judge my code to harshly!.
