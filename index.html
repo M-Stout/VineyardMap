@@ -68,7 +68,7 @@
   <div margin: 25px 0px 0px 25px;>
   	   <h1> -Map of The Vineyard: </h1> -The census and all response data is shown on the right-hand side. <br> -Last updated: <a href="https://github.com/grimer30/VineyardMap">The GitHub is the best way to track updates.</a> Feel free to raise issues and make pull requests.
   </div>
-  <div id="world-map-gdp" style="width: 75%; height: 800px; margin: 10px 10px 10px 10px; "></div>
+  <div id="world-map-gdp" style="width: 70%; height: 800px; margin: 10px 10px 10px 10px; "></div>
   <script>
     $(function(){
       	$('#world-map-gdp').vectorMap({
@@ -80,7 +80,7 @@
 				stroke: 'transparent',
 				"stroke-width": 2,
 				"stroke-opacity": 1,
-				fill: '#a300ff',
+				fill: '#cecece',
 			}
 		},
         regionLabelStyle: {
@@ -97,8 +97,23 @@
         series: {
         	regions: [{
             	values: colourData,
-            	scale: ['#ff00ea', '#ff5100'],
-              	normalizeFunction: 'polynomial'
+            	scale: ['#8900ff', '#ff8d00'],
+              	normalizeFunction: 'linear',
+				legend: {
+                  vertical: true,
+                  title: 'Colours:',
+                  labelRender: function(v){
+                    return {
+					  0: 'Vacant',
+					  1: 'Occupied',
+                      2: 'Special',
+                      3: 'Important',
+					  4: 'Main Streets',
+					  5: 'Avenues',
+                    }[v];
+                  }
+                }
+				
             }]
           },
           onRegionTipShow: function(e, el, code){
