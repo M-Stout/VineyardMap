@@ -97,19 +97,19 @@
         series: {
         	regions: [{
             	values: colourData,
-            	scale: ['#8900ff', '#ff8d00'],
-              	normalizeFunction: 'linear',
+            	scale: ['#6d00cc', '#ff8d00'],
+              normalizeFunction: 'linear',
 				legend: {
                   vertical: true,
                   title: 'Colours:',
                   labelRender: function(v){
                     return {
-					  0: 'Vacant',
-					  1: 'Occupied',
+                      0: 'Vacant',
+                      1: 'Occupied',
                       2: 'Special',
                       3: 'Important',
-					  4: 'Main Streets',
-					  5: 'Avenues',
+                      4: 'Main Streets',
+                      5: 'Avenues',
                     }[v];
                   }
                 }

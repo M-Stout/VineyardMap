@@ -18,7 +18,6 @@ var titleData= {
   "P183": "The Carnival",
   "P252": "The Rollercoaster",
   "P156": "The Carnival",
-  "P252": "The Carnival",
   "P183": "The Carnival",
   "P218": "The Carnival",
   "P45": "The Carnival",
@@ -42,5 +41,6 @@ var titleData= {
   "P369": "Monkey's Animal Club",
   "P137": "m8 4 m8",
   "P347": "Statue of Lord Haunter",
-
+  "P61": "Epic's Restaurant",
+  
 };
