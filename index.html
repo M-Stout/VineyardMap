@@ -81,6 +81,10 @@
 				"stroke-width": 2,
 				"stroke-opacity": 1,
 				fill: '#cecece',
+			},
+			selected: {
+				fill: '#b52400',
+				stroke: 'black',
 			}
 		},
         regionLabelStyle: {
@@ -92,7 +96,7 @@
               hover: {
                 fill: 'black',
 				"fill-opacity": '0.2'
-              }
+              },
             },		  
         series: {
         	regions: [{
@@ -116,6 +120,8 @@
 				
             }]
           },
+		  regionsSelectable: true,
+      	  regionsSelectableOne: true,
           onRegionTipShow: function(e, el, code){
 		    if (titleData[code] !== undefined) {
 		  	   el.html(el.html()+ '<br>' + "<strong>Title: </strong>" + ' '+titleData[code]+'');
@@ -149,8 +155,9 @@
               }
             }
         });
-	   
+
     });
+
 	function Wrapper (input) {
 		var words = input.split(" ");
 		var output = words.join(" \n");
