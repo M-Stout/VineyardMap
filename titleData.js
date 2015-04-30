@@ -16,7 +16,8 @@ var titleData= {
   "P31": "Welcome, Peasant! Library",
 
   "P183": "The Carnival",
-  "P252": "The Rollercoaster",
+  "P25": "The Rollercoaster",
+  "P252": "The Carnival",
   "P156": "The Carnival",
   "P183": "The Carnival",
   "P218": "The Carnival",
@@ -42,5 +43,6 @@ var titleData= {
   "P137": "m8 4 m8",
   "P347": "Statue of Lord Haunter",
   "P61": "Epic's Restaurant",
+  "P546": "Vineyard Hub Hang Out",
   
 };

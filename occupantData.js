@@ -22,7 +22,7 @@ var occupantData = {
   "P31": "Chilyconcarnage",
 
   "P183": "Carnival Worker",
-  "P252": "Carnival Worker",
+  "P25": "Carnival Worker",
   "P183": "Carnival Worker",
   "P156": "Carnival Worker",
   "P252": "Carnival Worker",
@@ -46,7 +46,7 @@ var occupantData = {
   "P615": "NikiCy4",
   "P116": "SystemOctave",
   "P172": "lord_thickness, b24a, snarfthesnarf",
-  "P252": "bullseye2230, Science_Friction, swaggy_boi",
+  "P25": "bullseye2230, Science_Friction, swaggy_boi",
   "P609": "eluamous_nailo",
   "P214": "",
   "P325": "",
@@ -93,6 +93,7 @@ var occupantData = {
   "P448":	"",
   "P349":	"",
   "P484":	"jordania78",
+  "P546": "Baneful Spirit",
 
 
 };
