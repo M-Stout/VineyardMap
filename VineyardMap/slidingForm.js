@@ -6,18 +6,18 @@ var main = function() {
     }, 200);
 
     $('body').animate({
-      right: "35%"
+      right: "40%"
     }, 200);
   });
 
   /* Then push them back */
   $('.icon-close').click(function() {
     $('.form').animate({
-      right: "-35%"
+      right: "-40%"
     }, 200);
 
     $('body').animate({
-      right: "35%"
+      right: "40%"
     }, 200);
   });
 };
