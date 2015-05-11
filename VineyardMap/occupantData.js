@@ -94,6 +94,7 @@ var occupantData = {
   "P349":	"",
   "P484":	"jordania78",
   "P546": "Baneful Spirit",
+  "P497": "Gear360",
 
 
 };

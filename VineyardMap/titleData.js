@@ -44,5 +44,6 @@ var titleData= {
   "P347": "Statue of Lord Haunter",
   "P61": "Epic's Restaurant",
   "P546": "Vineyard Hub Hang Out",
+  "P497": "Clockwork Cafe",
   
 };
