@@ -26,6 +26,11 @@
   <!-- IF NMJK IS READING THIS THEN I USED YOUR CODE AS A REFERENCE THANKS FOR NOT BEING MAD AT ME :)-->
   
   <style type="text/css">
+  
+  html {
+    overflow: hidden;
+  }
+  
 	body {
 		margin: 0;
 		padding: 0;
@@ -71,10 +76,13 @@
 		font-weight: bold !important;
 		text-decoration: none;
 	}
+
   </style>
+  
   
 </head>
 <body>
+
   <div style= 
     "margin: 1% 30% 0px 1%;
     text-align: center;
@@ -83,112 +91,26 @@
         <a href="https://github.com/grimer30/VineyardMap">
           <img src="GitHub-Mark-120px-plus.png" alt="The GitHub is the best way to track updates." height="50"> </img>
         </a>
+        <a href="http://www.reddit.com/r/vineyardcommunity">
+          <img src="reddit-alien.png" alt="Link to The Vineyard subreddit." height="50"> </img>
+        </a>
       </div>
-  	  <h1 style=" font-family: arial;"> Street map of The Vineyard</h1>
+  	  <p style=" font-family: arial;">The original Street map of The Vineyard is safe. </p>
+    	<p style=" font-family: arial;">Below is a portal into the map that Lord Nisovin has made.</p>
       <div class="icon-menu" style="width: 5%"> CENSUS FORM </div>
   </div>
   <div id="world-map-gdp" style="width: 100%; height: 85%; 
-    background-color: #ffffff;
+    background-color: '#FFFFFF';
     border-style: ridge;
     border-width: 5px;
     border-color: #ffa500;
-   "> </div>
-  <script>
-    $(function(){
-      	$('#world-map-gdp').vectorMap({
-        map: 'VineyardMap',
-		backgroundColor: 'transparent',
-    zoomOnScroll: false,
-		zoomStep: '1.5',
-		regionStyle: {
-			initial: {
-				stroke: 'transparent',
-				"stroke-width": 2,
-				"stroke-opacity": 1,
-				fill: '#cecece',
-			},
-			selected: {
-				fill: '#b52400',
-				stroke: 'black',
-			}
-		},
-        regionLabelStyle: {
-              initial: {
-                fill: '#003300',
-				"fill-opacity": '1',
-				"font-size": "60%"
-              },
-              hover: {
-                fill: 'black',
-				"fill-opacity": '0.2'
-              },
-            },		  
-        series: {
-        	regions: [{
-            	values: colourData,
-            	scale: ['#6d00cc', '#ff8d00'],
-              normalizeFunction: 'linear',
-				legend: {
-                  vertical: true,
-                  title: 'Colours:',
-                  labelRender: function(v){
-                    return {
-                      0: 'Vacant',
-                      1: 'Occupied',
-                      2: 'Special',
-                      3: 'Important',
-                      4: 'Main Streets',
-                      5: 'Avenues',
-                    }[v];
-                  }
-                }
-				
-            }]
-          },
-		  regionsSelectable: true,
-      	  regionsSelectableOne: true,
-          onRegionTipShow: function(e, el, code){
-		    if (titleData[code] !== undefined) {
-		  	   el.html(el.html()+ '<br>' + "<strong>Title: </strong>" + ' '+titleData[code]+'');
-			}
-		    if (occupantData[code] !== undefined) {
-			   if (occupantData[code] == '') {
-			   	  	el.html(el.html()+ '<br>' + "<strong>Currently Vacant</strong>");
-			   }
-			   else {
-  			   		el.html(el.html()+ '<br>' + "<strong>Occupant: </strong>" + ' '+occupantData[code]+'');
-			   }
-			}
-			if (positionData[code] !== undefined) {
-		     el.html(el.html()+ '<br>' + "<strong>Position: </strong>" + ' '+positionData[code]+'');
-			}
-          },
-        labels: {
-              regions: {
-                render: function(code){
-					if (code == 'PORTAL') {
-					   return code;
-					}
-					if (colourData[code] == 3) {
-					   if (code.charAt(0) == 'P') {
-					   	  return Wrapper(titleData[code]);
-					   }
-					return Wrapper(code);
-					}
-                	<!-- return titleData[code]; -->
-                },
-              }
-            }
-        });
+   "> 
+     	<iframe src="http://buffalowizards.com/plotmap.php" id="my-iframe" width="100%" height="100%" scrolling="yes" >IFrame that goes to Nisovin's map.</iframe>
 
-    });
 
-	function Wrapper (input) {
-		var words = input.split(" ");
-		var output = words.join(" \n");
-		return output;
-	}
-  </script>
+   </div>
+   
+  
   
     <script src="slidingForm.js"></script>
   <div id="form" class="form" style="right: -40%; background-color: #ffffff"">
