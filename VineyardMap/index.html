@@ -15,12 +15,16 @@
 
   
   <script src="../js/jquery.js"></script>
+  <script src="../js/jquery.transform2d.js"></script>
+  <script src="../js/jquery.color.js"></script>
+  <script src="../js/jquery.color.svg-names.js"></script>
   <script src="../js/jquery-jvectormap-2.0.1.min.js"></script>
   <script src="VineyardMap.js"></script>
   <script src="titleData.js"></script>
   <script src="occupantData.js"></script>
   <script src="positionData.js"></script>
   <script src="colourData.js"></script>
+  
 
   
   <!-- IF NMJK IS READING THIS THEN I USED YOUR CODE AS A REFERENCE THANKS FOR NOT BEING MAD AT ME :)-->
@@ -36,6 +40,7 @@
 		padding: 0;
     background-color: #d8d8d8;
     color: #000000;
+    overflow: hidden;
 	}
 	#form {
 		width: 35%;
@@ -98,21 +103,30 @@
   	  <p style=" font-family: arial;">The original Street map of The Vineyard is safe. </p>
     	<p style=" font-family: arial;">Below is a portal into the map that Lord Nisovin has made.</p>
       <div class="icon-menu" style="width: 5%"> CENSUS FORM </div>
+      <div align="right" style="position: absolute; right: 10%; top: 1%;"> 
+        <script src="timeOfDay.js"></script>
+      </div>
   </div>
   <div id="world-map-gdp" style="width: 100%; height: 85%; 
     background-color: '#FFFFFF';
     border-style: ridge;
     border-width: 5px;
     border-color: #ffa500;
+    
+
    "> 
-     	<iframe src="http://buffalowizards.com/plotmap.php" id="my-iframe" width="100%" height="100%" scrolling="yes" >IFrame that goes to Nisovin's map.</iframe>
+     	<iframe src="http://buffalowizards.com/plotmap.php" id="my-iframe" width="100%" height="101%" scrolling="yes" >IFrame that goes to Nisovin's map.</iframe>
 
 
-   </div>
+  </div>
+   
+   
+  <script src="floatingHeads.js"></script>
+  <img id="floatingHead" src="images/winebarrelrocketpixelly.png" style="position: absolute; right: -10%; top: 50%; z-index: -1; width: 10%;" alt="This is supposed to be a picture of a floating head."> </div>
    
   
   
-    <script src="slidingForm.js"></script>
+  <script src="slidingForm.js"></script>
   <div id="form" class="form" style="right: -40%; background-color: #ffffff"">
      <div id="icon-close" class="icon-close" > CLOSE FORM </div>
   	 <iframe src="https://docs.google.com/forms/d/15I4yf4jNXYhrdEeN2GlB_iVlYtmmEBaJSTLOTCE4CWQ/viewform?embedded=true" width="100%" height="50%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
