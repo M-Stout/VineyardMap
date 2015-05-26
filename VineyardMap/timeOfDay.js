@@ -23,7 +23,7 @@
   //22-4 night
   else if (hours > 21 || hours < 5){
     $( "body" ).animate({
-      "background-color": "#0c3166",
+      "background-color": "##48648C",
     }, 5000);
   }
   //9-17 day
