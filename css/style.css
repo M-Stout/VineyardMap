@@ -56,7 +56,7 @@ body {
   text-transform: uppercase;
 }
 
-.icon-close {
+.right-close {
   cursor: pointer;
   position: absolute;
   
@@ -75,7 +75,7 @@ body {
   border-width: medium;
 }
 
-.icon-menu {
+.right-menu {
   cursor: pointer;
   position: absolute;
   
@@ -93,6 +93,47 @@ body {
   border-width: medium;
 }
 
-.icon-menu i {
+.right-menu i {
+  margin-right: 5px;
+}
+
+.bottom-close {
+  cursor: pointer;
+  position: absolute;
+  
+  background-color: #ffffff;
+  background-opacity: 1.0;
+  opacity: 1.0;
+  
+  width: 15%;
+  right: 5%;
+  top: 44%;
+  z-index: 200;
+  text-align: center;
+  font-size: 1vw;
+
+  border-style: solid;
+  border-width: medium;
+}
+
+.bottom-menu {
+  cursor: pointer;
+  position: absolute;
+  
+  background-color: #ffffff;
+  background-opacity: 1.0;
+  opacity: 1.0;
+  
+  right: 4%;
+  bottom: 1%;
+  z-index: 0;
+  text-align: center;
+  font-size: 1vw;
+
+  border-style: solid;
+  border-width: medium;
+}
+
+.bottom-menu i {
   margin-right: 5px;
 }

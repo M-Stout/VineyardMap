@@ -1,4 +1,4 @@
-var images = ['winebarrelrocketpixelly.png', 'scifri swadloon.png', 'sciencefriction.png', 'salamandersoul.png', dappercoat.png]
+var images = ['winebarrelrocketpixelly.png', 'scifri swadloon.png', 'sciencefriction.png', 'salamandersoul.png', 'dappercoat.png']
 var audios = ['rocket', 'swadloon', '', '', '']
 
 
