@@ -1,5 +1,5 @@
-var images = ['winebarrelrocketpixelly.png', 'scifri swadloon.png', 'sciencefriction.png', 'sciencefriction.png', 'salamandersoul.png', 'dappercoat.png', 'pichu.png', 'brianguitarpixel.png']
-var audios = ['rocket', 'swadloon', 'sciencegold', 'sciencebible', 'salamander', 'dapperdankmemes', 'pichuwaffles', 'musicmess']
+var images = ['winebarrelrocketpixelly.png', 'scifri swadloon.png', 'sciencefriction.png', 'sciencefriction.png', 'salamandersoul.png', 'dappercoat.png', 'pichu.png', 'brianguitarpixel.png', 'spacecore.png', 'spacecore.png']
+var audios = ['rocket', 'swadloon', 'sciencegold', 'sciencebible', 'salamander', 'dapperdankmemes', 'pichuwaffles', 'musicmess', 'spaceshort', 'spacelong']
 
 
 $(document).ready(function() {
